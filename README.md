@@ -29,7 +29,7 @@ DB_NAME=
 ATLAS_URI="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority"
 ```
 
-> **NOTE**
+> [!NOTE]
 > To fill `DB_NAME` and `ATLAS_URI` variables, please refer to your MongoDB account.
 
 ### Default packages installed
