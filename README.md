@@ -25,34 +25,22 @@ or manually create a `.env` file to the project root and copy/paste this default
 
 ```
 PORT=3000
-DB_NAME=
-ATLAS_URI="mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority"
+MONGODB_NAME=test
+MONGODB_URI="mongodb://localhost:27017/"
 ```
 
 > [!NOTE]
-> To fill `DB_NAME` and `ATLAS_URI` variables, please refer to your MongoDB account.
-
-### Default packages installed
-
-| Package      | Description                                 | Docs                                                                         |
-| ------------ | ------------------------------------------- | ---------------------------------------------------------------------------- |
-| **express**  | API calling and routes                      | [https://expressjs.com/](https://expressjs.com/)                             |
-| **nodemon**  | API rendering in Real-time                  | [https://nodemon.io/](https://nodemon.io/)                                   |
-| **dotenv**   | Environment manager                         | [https://www.npmjs.com/package/dotenv](https://www.npmjs.com/package/dotenv) |
-| **mongoose** | Elegant mongodb object modeling for Node.js | [https://mongoosejs.com/](https://mongoosejs.com/)                           |
-| **cors**     | Enable CORS with various options            | [https://www.npmjs.com/package/cors](https://www.npmjs.com/package/cors)     |
+> To fill `MONGODB_NAME` (database name) and `MONGODB_URI` variables, please refer to your MongoDB account.
 
 ## Testing and development
 
 ```bash
-# Run
 $ npm run dev
-
-# or run directly
-$ nodemon index.js
 ```
 
-This command will execute `nodemon index.js` command. For each code update, `nodemon` will restart automatically.
+### MongoDB
+
+This app uses (Mongoose)[https://mongoosejs.com/] to interact with your Mongo database.
 
 ## Deployment
 
@@ -67,3 +55,7 @@ You can deploy with **Vercel**: [see more](https://vercel.com/) and check `verce
 Current licence is `MIT`.
 
 **You are free to modify and improve this git project.**
+
+```
+
+```
