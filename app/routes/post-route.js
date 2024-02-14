@@ -5,36 +5,37 @@ import {
   updatePost,
   deletePost,
 } from "../services/post-service";
+import { httpServerError, httpSuccess } from "../utils/http-response";
 
 module.exports = (server) => {
   server
     .get("/posts", (_, res) => {
       getPosts()
-        .then((result) => res.json(result))
-        .catch((error) => res.json({ message: error }).status(500));
+        .then((result) => httpSuccess(res, result))
+        .catch((error) => httpServerError(res, error));
     })
 
     .get("/posts/:id", (req, res) => {
       getPost(req.params.id)
-        .then((result) => res.json(result))
-        .catch((error) => res.json({ message: error }).status(500));
+        .then((result) => httpSuccess(res, result))
+        .catch((error) => httpServerError(res, error));
     })
 
     .post("/posts/create", (req, res) => {
       addPost(req.body)
-        .then((result) => res.json(result).status(201))
-        .catch((error) => res.json({ message: error }).status(500));
+        .then((result) => httpCreated(res, result))
+        .catch((error) => httpServerError(res, error));
     })
 
     .put("/posts/:id/update", (req, res) => {
       updatePost(req.params.id, req.body)
-        .then((result) => res.json(result))
-        .catch((error) => res.json({ message: error }).status(500));
+        .then((result) => httpSuccess(res, result))
+        .catch((error) => httpServerError(res, error));
     })
 
     .delete("/posts/:id", (req, res) => {
       deletePost(req.params.id)
-        .then((result) => res.json(result))
-        .catch((error) => res.json({ message: error }).status(500));
+        .then((result) => httpSuccess(res, result))
+        .catch((error) => httpServerError(res, error));
     });
 };
