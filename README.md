@@ -40,7 +40,7 @@ $ npm run dev
 
 ### MongoDB
 
-This app uses (Mongoose)[https://mongoosejs.com/] to interact with your Mongo database.
+This app uses [Mongoose](https://mongoosejs.com/) to interact with your Mongo database.
 
 ## Deployment
 
