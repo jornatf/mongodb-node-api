@@ -55,7 +55,3 @@ You can deploy with **Vercel**: [see more](https://vercel.com/) and check `verce
 Current licence is `MIT`.
 
 **You are free to modify and improve this git project.**
-
-```
-
-```
